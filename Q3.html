@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+// Q.3: Add a property named program in student prototype. 
+<html>
+<body>
+
+<h2>Add property </h2>
+<script>
+    function student(name, age)
+    {
+        this.name = name;
+        this.age = age;
+    }
+    s1 = new student("ali", 27);
+    s2 = new student("kamran", 28);
+    s1.program = "bcs";
+    console.log(s1.program);
+    console.log(s1);
+    console.log(s2.program);
+    student.prototype.program = "mcs";
+    console.log(s1,s2);
+</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+// Q.1: Make a constructor function to create the objects of different students. Students should have following properties: name, age, semester 
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Object Constructors</h2>
+
+<p id="demo"></p>
+
+<script>
+// Constructor function for Students objects
+function Student(Name, age, semester) {
+  this.Name = Name;
+  this.age = age;
+  this.semester = semester;
+}
+
+// Create a Student object
+var student1 = new Student("John", 25, 5);
+var student2 = new Student("kiran", 22, 8);
+var student3 = new Student("noor", 20, 6);
+
+console.log("My name is " + student1.Name + ".");
+console.log("My name is " + student2.Name + ".");
+</script>
+
+</body>
+</html>
