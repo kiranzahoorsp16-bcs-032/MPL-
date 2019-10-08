@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <p>Multi-Level Inheritance
+        </p>
+        <script>
+function Item(type, name)
+ {
+    if (arguments.length > 0)
+    {
+        this.type = type;
+        this.name = name;
+    }
+ }
+
+ function Book(title, author)
+ {
+   Item.call(this, "book", title);
+   this.author = author;
+ }
+ Book.prototype = new Item();
+Book.Create = function (title, author) { return new Book(title, author); 
+}
+var aBook = Book.Create("Code Complete 2", "Steve McConnell");
+console.log(aBook);
+</script>
+</body>
+</html>

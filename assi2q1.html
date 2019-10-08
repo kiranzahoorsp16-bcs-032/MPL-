@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p>Creating Classes And Objects</p>
+
+<script>
+class student
+{
+constructor(name , fathername, age)
+{
+    this.name = name;
+    this.fathername = fathername;
+    this.age = age;
+}
+}
+class mmgntStudent extends student
+{
+    constructor(name, fathername, age , industryName)
+    {
+        super(name , fathername , age);
+        this.industryName = industryName;
+    }
+    set_set_industryName(industryName)
+    {
+		this.industryName = industryName;
+	}
+	get_industryName()
+    {
+		return this.industryName;
+	}
+}
+class csStudent extends student
+{
+    constructor(name , fathername, age , fypTitle)
+    {
+		super(name , fathername , age);
+		this.fypTitle = fypTitle;
+	}
+	set set_fypTitle(fypTitle)
+    {
+		this.fypTitle = fypTitle;
+	}
+	get get_fypTitle()
+    {
+		return this.fypTitle;
+	}
+}
+std = new student( "kiran" , "zahoor" , 20);
+console.log(std);
+std1 = new csStudent("faiqa" , "saleem" , 20);
+std1.get_fypTitle = "online school monitoring system";
+console.log(std1);
+std2 = new mmgntStudent("zainab" , "qazi" , 20);
+std2.get_industryName = "johnson company";
+console.log(std2);
+</script>
+
+</body>
+</html>
